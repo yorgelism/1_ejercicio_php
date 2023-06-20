@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ejercicio numero 1 de php   </title>
+</head>
+<body style="background-color: yellow">
+<center><h1>Ejercicio Numero 1 de php </h1></center>
+
+<center><form method="post" action="">
+
+<label for="dato">Ingrese un número:</label>
+
+<input type="number" id="dato" name="dato" required>
+<button type="submit">PROCESAR­</button>
+</form></center>
+
+<center><?php
+if (isset($_POST["dato"])) {
+$dat = $_POST["dato"];
+
+
+for ($i = 1; $i <= $dat; $i++) {
+if ($i % 3 == 0 && $i % 5 == 0) {
+
+ echo "<p>FIZZBUZZ<br></p>";
+
+}
+
+ elseif ($i % 3 == 0) {
+echo "<p'>FIZZ<br></­p>";
+}
+
+elseif ($i % 5 == 0) {
+echo "<p'>BUZZ<br></­p>";
+} 
+
+else {
+echo  $i."<br>";
+}
+}
+
+
+}
+?></center>
+</body>
+</html>
